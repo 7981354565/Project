@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Welcome to tenders</title>
+<style type="text/css">
+body {
+        background-image: linear-gradient(75deg,#09203F,#537895);
+        background-size: cover; /* You can also use 'contain' or specify width and height */
+        /* Additional background properties can be added here */
+    }
+    #bubbleContainer{
+    width: 100%;
+    height: 100vh;
+    /* background-color: wheat; */
+    position: absolute;
+    overflow: hidden;
+}
+.bubble{
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+      background-image: linear-gradient(75deg,#09203F,#537895);
+    box-shadow: 2px 2px 5px black;
+    position: absolute;
+    animation: bubbleAnimation 5s infinite both;
+}
+#bubble1{
+    right: 10%;
+    top: 5%;
+    animation-delay: 0.5s;
+    animation-direction: alternate;
+}
+#bubble2{
+    transform: scale(0.2);
+   left: 40%;
+   bottom: 20%;
+   animation-delay: 5s;
+   animation-direction: reverse;
+}
+#bubble3{
+    left: 20%;
+    bottom: 50%;
+    transform: scale(1.5);
+    animation-delay: 2s;
+    animation-direction: normal;
+}
+#bubble4{
+    transform: scale(0.2);
+    left:40%;
+    bottom: 20%;
+    animation-delay: 1s;
+    animation-direction: alternate-reverse;
+}
+#bubble5{
+    right: 20%;
+    top:50%;
+    transform: scale(2); 
+    animation-delay: 6s;
+    animation-direction: alternate;
+}
+#bubble6{
+    left: 10%;
+    bottom: 10%;
+    transform: scale(0.3);
+    animation-delay: 1.5s;
+    animation-direction: reverse;
+}
+@keyframes bubbleAnimation{
+    0%,100%{
+        transform: translate(0px,0px) scale(1);
+    }
+    25%{
+        transform: translate(100px,150px) scale(1.5);
+    }
+    35%{
+        transform: translate(-150px,80px) scale(0.2);
+    }
+    50%{
+        transform: translate(150px,-80px) scale(2);
+    }
+    75%{
+        transform: translate(200px,40px) scale(1.3);
+    }
+    80%{
+        transform: translate(-40px,0px) scale(1.7);
+    }
+}
+
+#form{
+ display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+background-color:transparent;;
+width : 600px;
+height : 600px;
+position:absolute;
+left:480px;
+top:50px;
+bottom : 50px;
+right : 300px;
+border-radius : 50px;
+
+}
+
+label{
+position:relative;
+left:500px;
+top:300px
+}
+input{
+position:relative;
+left:500px;
+top:300px;
+}
+.shadow-box {
+      position: relative;
+     /*margin: 10px;*/
+      left: 50px;
+      top:30px;
+      width: 400px;
+      height:fit-content;
+      padding: 20px;
+     background-color: cornflowerblue;
+      box-shadow: 10px 10px 20px black;
+    }
+    
+    input{
+    	height : 50px;
+    	width:100px;
+        margin:10px;
+     background-color: dimgray;
+        color:white;
+    }
+    button{
+    width : 369px;
+    height : 39px;
+   background-color: dimgray;
+   color:white;
+    }
+    #TendersList
+    {
+     width : 369px;
+    height : 39px;
+    	position: absolute;
+    	left : 585px;
+    	top : 560px;
+    }
+    button:hover{
+    transform:  scale(1.5);
+    background-color: blue;
+    color: chartreuse;
+    letter-spacing: 2px;
+}
+input:hover{
+    transform:  scale(1.5);
+    background-color: blue;
+    color: chartreuse;
+    letter-spacing: 2px;
+}
+   </style>
+</head>
+<body>
+<div id="bubbleContainer">
+        <div id="bubble1" class="bubble"><h1 id="tenders">TENDERS</h1></div>
+        <div id="bubble2" class="bubble"><h1 id="tenders">TENDERS</h1></div>
+        <div id="bubble3" class="bubble"><h1 id="tenders">TENDERS</h1></div>
+        <div id="bubble4" class="bubble"><h1 id="tenders">TENDERS</h1></div>
+        <div id="bubble5" class="bubble"><h1 id="tenders">TENDERS</h1></div>
+        <div id="bubble6" class="bubble"><h1 id="tenders">TENDERS</h1></div>
+    </div>
+    
+<div id="form">
+
+<button onclick="redirecttonew()">Click here to fill the tenders form</button><br><br>
+<button onclick="redirecttoupdate()">Click here too update the tenders</button><br><br>
+</div>
+
+ 
+<form action="TendersDetails">
+
+<input type="submit" id="TendersList" value="List of Tenders" >
+</form>
+
+
+<script>
+function redirecttonew(){
+window.location.href='InsertingTenderInfo.html';
+} 
+function redirecttoupdate(){
+window.location.href='FetchingTender.html';
+} 
+</script>
+</body>
+</html>
