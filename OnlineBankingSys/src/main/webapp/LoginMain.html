@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+      <style>     
+*{
+  margin: 0;
+  padding: 0;
+  /* user-select: none; */
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+html,body{
+  height: 100%;
+}
+body{
+  display: grid;
+  place-items: center;
+  background: #dde1e7;
+  text-align: center;
+}
+.content{
+  width: 600px;
+  padding: 40px 30px;
+  background: lightblue;
+  border-radius: 10px;
+  box-shadow: -3px -3px 7px #ffffff73,
+               2px 2px 5px rgba(94,104,121,0.288);
+
+}
+.content .text{
+  font-size: 33px;
+  font-weight: 600;
+  margin-bottom: 35px;
+  color: #595959;
+}
+.field{
+  height: 50px;
+  width: 100%;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+button{
+  margin: 15px 0;
+  width: 100%;
+  height: 50px;
+  font-size: 18px;
+  line-height: 50px;
+  font-weight: 600;
+  background: #dde1e7;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #595959;
+  box-shadow: 2px 2px 5px #BABECC,
+             -5px -5px 10px #ffffff73;
+}
+button:focus{
+  color: #3498db;
+  box-shadow: inset 2px 2px 5px #BABECC,
+             inset -5px -5px 10px #ffffff73;
+}
+      </style>
+   </head>
+   <body>
+      <div class="content">
+         <div class="text">
+            Welcome To Online Banking System
+         </div>
+     
+            <div class="field">
+             
+               <button onclick="redirecttocredit()">Credit</button> <br>
+            </div>
+            <div class="field">
+              
+               <button onclick="redirecttodebit()">Debit</button>
+            </div>
+            <br>
+            <div class="field">
+             
+               <button onclick="redirecttocheckbalance()">Check Balance</button> <br>
+            </div>
+            <div class="field">
+               
+                <button onclick="redirecttotransactions()" >Transactions</button>
+             </div>
+      </div>
+
+      <script type="text/javascript">
+        function  redirecttocredit() {
+            window.location.href='CreditPage.html';
+        }
+        function redirecttodebit() {
+            window.location.href='DebitAmount.html';
+        }
+        function redirecttocheckbalance() {
+            window.location.href='CheckBalance.html';
+        }
+        function redirecttotransactions() {
+            window.location.href='AllTransactions.html';
+        }
+        </script>
+   </body>
+</html>
