@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script src="./calculator.js" defer></script>
+    <Style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            background-image:linear-gradient(90deg,red,orange,orangered);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        input{
+            width: 40px;
+            height: 40px;
+            border-radius: 8px ;
+            border: 4px solid black;
+            background-color: rgb(188, 224, 246);
+            cursor: pointer;
+        }
+        input:hover{
+            background-color: black;
+            color: white;
+        }
+        #display{
+            width: 166px;
+            height: 20px;
+            
+
+            background-image:linear-gradient(100deg,violet,indigo,blue,green,yellow,orange,red,violet);
+           -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            animation-name: colorBar;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            
+        }
+        #display:hover{
+            background-color: black;
+            color: white;
+        }
+        #display{
+            background-image: linear-gradient(75deg,red,blue,orange,green,deeppink,yellow,aqua,red);
+            
+        }
+        @keyframes colorBar {
+            from{
+                background-position: 500px;
+            }
+            to{
+                background-position: 0px;
+            }
+            
+        }
+        #clear{
+            width: 84px;
+            height: 33px;
+            border-radius: 10px;
+            background-color: red;
+        }
+        #clear:hover{
+            background-color: black;
+            color: white;
+        }
+        #equal{
+            width: 85px;
+            height: 33px;
+            border-radius: 10px;
+            background-color: red;
+        }
+        #equal:hover{
+            background-color: black;
+            color: white;
+        }
+        #cform{
+            width: 173px;
+            height: 232px;
+            background-color: black;
+            border-radius: 10px;
+            box-shadow: 5px 4px 4px black;
+            border: 1.5px solid whitesmoke;
+            
+        }
+        
+        
+     
+    </Style>
+</head>
+<body>
+    
+    <form name="cform" id="cform">
+        <input type="text" id="display" name="answer" class="color"
+        <div>
+            <input type="button" value="1" onclick="cform.answer.value +='1'">
+            <input type="button" value="2" onclick="cform.answer.value +='2'">
+            <input type="button" value="3" onclick="cform.answer.value +='3'">  
+            <input type="button" value="+" onclick="cform.answer.value +='+'">
+        </div>
+
+        <div>
+             <input type="button" value="4" onclick="cform.answer.value += '4'">
+             <input type="button" value="5" onclick="cform.answer.value += '5'">
+             <input type="button" value="6" onclick="cform.answer.value += '6'">
+             <input type="button" value="-" onclick="cform.answer.value += '-'">
+        </div>
+    
+        <div>
+            <input type="button" value="7" onclick="cform.answer.value += '7'">
+            <input type="button" value="8" onclick="cform.answer.value += '8'">
+            <input type="button" value="9" onclick="cform.answer.value += '9'">
+            <input type="button" value="*" onclick="cform.answer.value += '*'">
+        </div>
+  
+        <div>
+            <input type="button" value="." onclick="cform.answer.value += '.'">
+            <input type="button" value="0" onclick="cform.answer.value += '0'">
+            <input type="button" value="%" onclick="cform.answer.value += '%'">
+            <input type="button" value="/" onclick="cform.answer.value += '/'">
+        </div>
+  
+        <div>
+            <input type="button" id="clear" value="Clear" onclick="cform.answer.value = ''">
+            <input type="button" id="equal" value="=" onclick="cform.answer.value = eval(cform.answer.value)">
+
+        </div>
+    </form>
+</body>
+</html>
